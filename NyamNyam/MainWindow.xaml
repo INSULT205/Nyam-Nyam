@@ -1,0 +1,40 @@
+﻿<Window x:Class="NyamNyam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NyamNyam"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Resources/NyamnyamLogo.png"
+        Title="NyamNyam" MinHeight="450" MinWidth="1000">
+    <Grid Background="#fdb249">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Column="1" x:Name="MainFrame" 
+               NavigationUIVisibility="Hidden"
+               Background="#fed7c1"/>
+        
+        
+        <StackPanel HorizontalAlignment="Center"  Margin=" 15 15 15 0">
+            <TextBlock x:Name="DishesTB"
+                       Hyperlink.Click="DishesTB_Click">
+                       <Hyperlink>Dishes</Hyperlink>
+            </TextBlock>
+            
+            <TextBlock x:Name="Ingredients"
+                       Margin="0 10 0 0 "
+                       Hyperlink.Click="Ingredients_Click">
+                       <Hyperlink>ingredients</Hyperlink>
+            </TextBlock>
+            <TextBlock x:Name="Orders"
+                       Margin="0 10 0 0"
+                       Hyperlink.Click="Orders_Click">
+                       <Hyperlink>Orders</Hyperlink>
+            </TextBlock>
+        </StackPanel>
+
+    </Grid>
+</Window>
